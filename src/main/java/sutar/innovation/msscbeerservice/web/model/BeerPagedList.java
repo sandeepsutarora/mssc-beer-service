@@ -13,7 +13,7 @@ public class BeerPagedList extends PageImpl<BeerDTO> {
     //this is latest change
     //this is another change. issues need to take care
 
-     public BeerPagedList(List<BeerDTO> content) {
+    public BeerPagedList(List<BeerDTO> content) {
         super(content);
     }
 }

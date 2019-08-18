@@ -19,12 +19,12 @@ public class BeerLoader implements CommandLineRunner {
         loadBeerObjects();
     }
 
-    private void loadBeerObjects(){
-                Beer beer = Beer.builder().beerName("KingFisher")
-                        .beerStyle("Cold")
-                        .minOnHand(12)
-                        .price(new BigDecimal(3322))
-                        .upc(233333L)
-                        .build();
+    private void loadBeerObjects() {
+        Beer beer = Beer.builder().beerName("KingFisher")
+                .beerStyle("Cold")
+                .minOnHand(12)
+                .price(new BigDecimal(3322))
+                .upc(233333L)
+                .build();
     }
 }

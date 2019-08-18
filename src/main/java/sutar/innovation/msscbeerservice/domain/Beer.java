@@ -23,15 +23,15 @@ import org.hibernate.annotations.GenericGenerator;
 public class Beer {
     @Id
     @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name="UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(length=36, columnDefinition = "varchar" , updatable = false, nullable = false)
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false)
     private UUID uuid;
 
     @Version
     private Long Version;
 
     @CreationTimestamp
-    @Column(updatable=false)
+    @Column(updatable = false)
     private Timestamp createdDate;
 
     @CreationTimestamp
