@@ -12,24 +12,21 @@ import java.util.UUID;
 @RestController
 public class BeerController {
     @GetMapping({"/{beerId}"})
-    public ResponseEntity<BeerDTO> getBeerById(@PathVariable("beerId") UUID beerId)
-    {
+    public ResponseEntity<BeerDTO> getBeerById(@PathVariable("beerId") UUID beerId) {
         return new ResponseEntity<>(BeerDTO.builder().build(), HttpStatus.OK);
     }
 
-   @PostMapping
-    public ResponseEntity saveNewBeer(@RequestBody BeerDTO beerDTO)
-   {
-    return new ResponseEntity(HttpStatus.CREATED);
-   }
+    @PostMapping
+    public ResponseEntity saveNewBeer(@RequestBody BeerDTO beerDTO) {
+        return new ResponseEntity(HttpStatus.CREATED);
+    }
 
-   @PutMapping("/{beerId}")
-    public ResponseEntity updateBeerBuId(@PathVariable("beerId") UUID beerId, @RequestBody BeerDTO beerDTO )
-   {
-       //todo Implementations.
-       return new ResponseEntity(HttpStatus.NO_CONTENT);
+    @PutMapping("/{beerId}")
+    public ResponseEntity updateBeerBuId(@PathVariable("beerId") UUID beerId, @RequestBody BeerDTO beerDTO) {
+        //todo Implementations.
+        return new ResponseEntity(HttpStatus.NO_CONTENT);
 
-   }
+    }
 
 
 }
